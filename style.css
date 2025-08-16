@@ -1,7 +1,139 @@
+#background-picker-container, .background-picker-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: rgba(30, 30, 30, 0.92);
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    padding: 14px 22px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: inherit;
+    font-size: 1.08rem;
+    color: var(--text-color);
+    border: 1px solid rgba(255,255,255,0.18);
+}
+.background-picker-container label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+.background-picker-container input[type="color"] {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 2px solid #fff2;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 6px;
+    transition: border 0.2s;
+}
+.background-picker-container input[type="color"]:hover,
+.background-picker-container input[type="color"]:focus {
+    border: 2px solid var(--text-color);
+}
+}
 *{
     margin: 0;
     padding: 0;
     border: 0;
     outline: none;
     box-sizing: border-box;
+}
+
+body {
+
+    --base-color: #2f313f;
+
+    --surface-color: oklch(from var(--base-color) calc(l * 1.2) c h);
+    --brand-color: oklch(from var(--base-color) calc(l * 3) calc(c * 5) h);
+    --text-color: #f0f0f0;
+    --secondary-text-color: oklch(from var(--text-color) l c h / 0.6);
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--base-color);
+    color: var(--text-color);
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 105px;
+    background: #fff;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out;
+}
+
+#base-color-input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#background-picker-container, .background-picker-container {
+    color: var(--text-color);
+}
+.background-picker-container label, .background-picker-container input[type="color"] {
+    color: var(--text-color);
+    background: transparent;
+    border: none;
+}
+.search-box {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-box input {
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 32px;
+}
+
+.search-box input::placeholder {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.search-box button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+.search-box button:hover {
+    color: #fff;
+    background: #06283D;
+}
+
+.search-box i {
+    position: absolute;
+    color: #06283D;
+    font-size: 28px;
+}
+
+.weather-box {
+    text-align: center;
 }
