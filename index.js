@@ -101,7 +101,7 @@ const error404 = document.querySelector('.not-found');
 
 search.addEventListener('click', () => {
     
-    const APIKey = 'e217e2c91c4ae126b133af30f43674e1';
+    const APIKey = 'your_openweathermap_api_key_here';
     const city = cityInput.value;
 
     // Hide suggestions on search
